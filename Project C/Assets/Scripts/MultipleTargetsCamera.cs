@@ -37,19 +37,19 @@ public class MultipleTargetsCamera : MonoBehaviour
             smoothTime = 0.1f;
             Vector3 centerPoint = GetCenterPoint();
             Vector3 newPosition = centerPoint + offset;
-            transform.position = Vector3.SmoothDamp(transform.position, /*newPosition*/new Vector3(Mathf.Clamp(newPosition.x, minx, maxx), newPosition.y, Mathf.Clamp(newPosition.z, minz, maxz)), ref velocity, smoothTime);
+            transform.position = Vector3.SmoothDamp(transform.position, new Vector3(Mathf.Clamp(newPosition.x, minx, maxx), newPosition.y, Mathf.Clamp(newPosition.z, minz, maxz)), ref velocity, smoothTime);
         }
         else if (targets[0] != null && targets[1] == null)
         {
             smoothTime = 0.5f;
-            transform.position = Vector3.SmoothDamp(transform.position, /*targets[0].position + offset*/new Vector3(Mathf.Clamp(targets[0].position.x, minx, maxx), targets[0].position.y + offset.y, Mathf.Clamp(targets[0].position.z + offset.z, minz, maxz)) /*+ offset*/, ref velocity, smoothTime);
+            transform.position = Vector3.SmoothDamp(transform.position, new Vector3(Mathf.Clamp(targets[0].position.x, minx, maxx), targets[0].position.y + offset.y, Mathf.Clamp(targets[0].position.z + offset.z, minz, maxz)), ref velocity, smoothTime);
             StartCoroutine(Wait());
             FindPlayer(2);
         }
         else if (targets[1] != null)
         {
             smoothTime = 0.5f;
-            transform.position = Vector3.SmoothDamp(transform.position, /*targets[1].position + offset*/new Vector3(Mathf.Clamp(targets[1].position.x, minx, maxx), targets[1].position.y + offset.y, Mathf.Clamp(targets[1].position.z + offset.z, minz, maxz)) /*+ offset*/, ref velocity, smoothTime);
+            transform.position = Vector3.SmoothDamp(transform.position, new Vector3(Mathf.Clamp(targets[1].position.x, minx, maxx), targets[1].position.y + offset.y, Mathf.Clamp(targets[1].position.z + offset.z, minz, maxz)), ref velocity, smoothTime);
             StartCoroutine(Wait());
             FindPlayer(1);
         }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3148995970108270010}
   - component: {fileID: 8687428622400313667}
   - component: {fileID: 1581891615428732533}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: paleta
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,0 +1,2 @@
+Z:\Používatelia\PC\Desktop\Riki\škola 2020-21\gamedev\Project C\ProjectC\Project C\obj\Debug\AstarPathfindingProjectEditor.csprojAssemblyReference.cache
+Z:\Používatelia\PC\Desktop\Riki\škola 2020-21\gamedev\Project C\ProjectC\Project C\obj\Debug\AstarPathfindingProjectEditor.csproj.CoreCompileInputs.cache

@@ -1,0 +1,2 @@
+Z:\Používatelia\PC\Desktop\Riki\škola 2020-21\gamedev\Project C\ProjectC\Project C\obj\Debug\PackageToolsEditor.csprojAssemblyReference.cache
+Z:\Používatelia\PC\Desktop\Riki\škola 2020-21\gamedev\Project C\ProjectC\Project C\obj\Debug\PackageToolsEditor.csproj.CoreCompileInputs.cache

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5943866829130928471}
   - component: {fileID: 160655647568970124}
   - component: {fileID: 6958412977603740624}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 1193933649870116365}
   - component: {fileID: 4876621313934830324}
   - component: {fileID: 4718533573321702178}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Stlp
   m_TagString: Untagged
   m_Icon: {fileID: 0}

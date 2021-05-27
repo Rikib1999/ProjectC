@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8885904039288771643}
   - component: {fileID: 2913155850137757890}
   - component: {fileID: 4817550877296265550}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: skrina_na_boxy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

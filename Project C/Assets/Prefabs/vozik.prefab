@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7735981414132319592}
   - component: {fileID: 5332337667685421212}
   - component: {fileID: 4422684926551314218}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 122895848561186696}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: vozik
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 4013403540456585128}
   - component: {fileID: 4225449191965442582}
   - component: {fileID: 1056412209106649765}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
