@@ -23,10 +23,12 @@ public class Enemy : MonoBehaviour
     public GameObject[] bloodPrefab;
     private GameObject blood;
     private Transform floor;
+    private NavMeshAgent agent;
 
     public void Start()
     {
         transform.position = new Vector3(transform.position.x, 1.392f, transform.position.z);
+        agent = GetComponent<NavMeshAgent>();
 
         if (GameObject.FindGameObjectWithTag("Player 1") != null)
         {
@@ -37,41 +39,44 @@ public class Enemy : MonoBehaviour
         {
             position2 = GameObject.FindGameObjectWithTag("Player 2").transform;
         }
-        GetComponent<NavMeshAgent>().SetDestination(position1.position);
+        agent.SetDestination(position1.position);
         text = GameObject.Find("Score");
     }
 
     public void Update()
     {
-        if (position1 != null && position2 != null)
+        if (agent.enabled)
         {
-            FindPlayer(3);
-            float distance1 = Vector3.Distance(position1.position, transform.position);
-            float distance2 = Vector3.Distance(position2.position, transform.position);
-
-            if (distance1 <= distance2)
+            if (position1 != null && position2 != null)
             {
-                GetComponent<NavMeshAgent>().SetDestination(position1.position);
+                FindPlayer(3);
+                float distance1 = Vector3.Distance(position1.position, transform.position);
+                float distance2 = Vector3.Distance(position2.position, transform.position);
+
+                if (distance1 <= distance2)
+                {
+                    agent.SetDestination(position1.position);
+                }
+                else
+                {
+                    agent.SetDestination(position2.position);
+                }
+            }
+            else if (position1 != null)
+            {
+                FindPlayer(2);
+                agent.SetDestination(position1.position);
+            }
+            else if (position2 != null)
+            {
+                FindPlayer(1);
+                agent.SetDestination(position2.position);
             }
             else
             {
-                GetComponent<NavMeshAgent>().SetDestination(position2.position);
+                FindPlayer(3);
+                agent.SetDestination(transform.position);
             }
-        }
-        else if (position1 != null)
-        {
-            FindPlayer(2);
-            GetComponent<NavMeshAgent>().SetDestination(position1.position);
-        }
-        else if (position2 != null)
-        {
-            FindPlayer(1);
-            GetComponent<NavMeshAgent>().SetDestination(position2.position);
-        }
-        else
-        {
-            FindPlayer(3);
-            GetComponent<NavMeshAgent>().SetDestination(transform.position);
         }
     }
 
@@ -109,10 +114,10 @@ public class Enemy : MonoBehaviour
 
     IEnumerator CantAttack()
     {
-        GetComponent<NavMeshAgent>().enabled = false;
+        agent.enabled = false;
         //GetComponent<ZombieCombat>().enabled = false;
         yield return new WaitForSeconds(1f);
-        GetComponent<NavMeshAgent>().enabled = true;
+        agent.enabled = true;
         //GetComponent<ZombieCombat>().enabled = true;
     }
 
@@ -128,7 +133,7 @@ public class Enemy : MonoBehaviour
         }
 
         GetComponent<Rigidbody>().drag = 3f;
-        GetComponent<NavMeshAgent>().enabled = false;
+        agent.enabled = false;
         //GetComponent<ZombieCombat>().enabled = false;
         gameObject.layer = 13;
         zombieBody.layer = 13;
