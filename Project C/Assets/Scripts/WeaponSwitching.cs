@@ -140,9 +140,9 @@ public class WeaponSwitching : MonoBehaviour
             case 0:
                 return -1;
             case 1:
-                return -1; //return weapon.GetComponent<Uzi>().currentAmmo;
+                return weapon.GetComponent<Uzi>().currentAmmo;
             case 2:
-                return -1;
+                return weapon.GetComponent<Shotgun>().currentAmmo;
             case 3:
                 return -1;
             case 4:

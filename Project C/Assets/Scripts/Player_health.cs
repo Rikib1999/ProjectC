@@ -17,8 +17,8 @@ public class Player_health : MonoBehaviour
     public bool invicible;
     public int dead = 0;
 
-    //public GameObject text;
-    //public float scorePoints;
+    public GameObject text;
+    public float scorePoints;
 
     public GameObject[] bloodPrefab;
     private GameObject blood;
@@ -47,7 +47,7 @@ public class Player_health : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
-        //text = GameObject.Find("Score");
+        text = GameObject.Find("Score");
     }
 
     private void Update()
@@ -143,10 +143,10 @@ public class Player_health : MonoBehaviour
 
     IEnumerator Die()
     {
-        //GameMaster.PlayerIsDead(p);
+        GameMaster.PlayerIsDead(p);
 
-        //Score score = text.GetComponent<Score>();
-        //score.AddScore(scorePoints);
+        Score score = text.GetComponent<Score>();
+        score.AddScore(scorePoints);
 
         GetComponent<PlayerMove>().enabled = false;
         GetComponent<Rigidbody>().drag = 3f;
@@ -182,7 +182,7 @@ public class Player_health : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1f);
-        //GameMaster.KillPlayer(this, p);
+        GameMaster.KillPlayer(this, p);
     }
 
     IEnumerator Invicible(int p)

@@ -115,26 +115,26 @@ public class Enemy : MonoBehaviour
     IEnumerator CantAttack()
     {
         agent.enabled = false;
-        //GetComponent<ZombieCombat>().enabled = false;
+        GetComponent<ZombieCombat>().enabled = false;
         yield return new WaitForSeconds(1f);
         agent.enabled = true;
-        //GetComponent<ZombieCombat>().enabled = true;
+        GetComponent<ZombieCombat>().enabled = true;
     }
 
     IEnumerator Die()
     {
-        //Score score = text.GetComponent<Score>();
-        //score.AddScore(scorePoints);
+        Score score = text.GetComponent<Score>();
+        score.AddScore(scorePoints);
 
         int r = UnityEngine.Random.Range(1, dropChance + 1);
         if (r == 1)
         {
-            GameObject supplyCrate = Instantiate(supplyCratePrefab, new Vector3(transform.position.x, 0.5f, transform.position.z), Quaternion.Euler(0f, 0f, 0f));
+            GameObject supplyCrate = Instantiate(supplyCratePrefab, new Vector3(transform.position.x, -8.2f, transform.position.z), Quaternion.Euler(0f, 0f, 0f));
         }
 
         GetComponent<Rigidbody>().drag = 3f;
         agent.enabled = false;
-        //GetComponent<ZombieCombat>().enabled = false;
+        GetComponent<ZombieCombat>().enabled = false;
         gameObject.layer = 13;
         zombieBody.layer = 13;
         int numOfChildren = zombieBody.transform.childCount;

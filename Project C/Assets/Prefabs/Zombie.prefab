@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 1204495162936745388}
   - component: {fileID: 115047687683733283}
   - component: {fileID: -4819282011313399364}
+  - component: {fileID: 6642561870032649351}
   - component: {fileID: -6143957718838395927}
   m_Layer: 7
   m_Name: Zombie
@@ -280,7 +281,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4561455035809635511}
-  - {fileID: 75417268490752682}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -332,13 +332,26 @@ MonoBehaviour:
   dropChance: 8
   dead: 0
   zombieBody: {fileID: 654942754460102308}
-  supplyCratePrefab: {fileID: 0}
+  supplyCratePrefab: {fileID: 726495259932728334, guid: 41c02ae7ebc822c46ad350ffc22714bb, type: 3}
   material: {fileID: 2100000, guid: 45b58aed1e5eace4d9a89b621dffb1d5, type: 2}
   bloodPrefab:
   - {fileID: 4095950971854920600, guid: 673b400d192a7f04c937e93e05e1d4cb, type: 3}
   - {fileID: 1884772160200179599, guid: 625d64822a55f5c47a237bab78b24af1, type: 3}
   - {fileID: 4222107859279563493, guid: fe42fc913a452d945b86acd49f0030fa, type: 3}
   - {fileID: 4250118569281663068, guid: aa805c69fcda63540a3ee9eb4d1c850d, type: 3}
+--- !u!114 &6642561870032649351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204495162936745382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97d021cf43ae2341b9afe3613ce3d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 25
 --- !u!195 &-6143957718838395927
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -553,36 +566,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4493585093827132993, guid: 2a9be28a8c99c7e4c9c8440b8ee3151f, type: 3}
---- !u!1 &4986740307302239982
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 75417268490752682}
-  m_Layer: 7
-  m_Name: AttackPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &75417268490752682
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4986740307302239982}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.628, z: 1.154}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1204495162936745389}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6381216544004171156
 GameObject:
   m_ObjectHideFlags: 0

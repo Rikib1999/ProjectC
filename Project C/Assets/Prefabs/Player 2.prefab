@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5112323255265116615
 Transform:
   m_ObjectHideFlags: 0
@@ -1723,6 +1723,8 @@ MonoBehaviour:
   p: 0
   invicible: 0
   dead: 0
+  text: {fileID: 0}
+  scorePoints: -500
   bloodPrefab:
   - {fileID: 4095950971854920600, guid: 673b400d192a7f04c937e93e05e1d4cb, type: 3}
   - {fileID: 1884772160200179599, guid: 625d64822a55f5c47a237bab78b24af1, type: 3}
@@ -2671,7 +2673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6194839944446136777
 Transform:
   m_ObjectHideFlags: 0
@@ -2826,7 +2828,7 @@ GameObject:
   - component: {fileID: 2360332653166508142}
   m_Layer: 0
   m_Name: WeaponHolder
-  m_TagString: Untagged
+  m_TagString: Weapon Holder2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2861,8 +2863,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedWeapon: 0
-  next: 99
-  previous: 120
+  next: 101
+  previous: 113
   ammo: 0
 --- !u!1001 &3781601430094423
 PrefabInstance:
